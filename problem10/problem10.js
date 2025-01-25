@@ -21,6 +21,8 @@ counter.decrement(); // 4
 
 function createCounter(init) {
     let currentValue = init;
+    console.log("line 23", init); // 5
+    
 
     return {
         increment: function () {
