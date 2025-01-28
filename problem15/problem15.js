@@ -22,6 +22,21 @@ Example
  Output=1;
 
 
+Ek utsahi (shaukeen) yatri apne hikes ke record kaafi achhe se rakhta hai. Last hike me jo exactly steps liye gaye the, uske liye har step note kiya gaya tha ki wo ek uphill (upar chadhai) U tha ya downhill (neeche utarai) D. Hikes hamesha sea level se shuru hoti hain aur sea level par hi khatam hoti hain, aur har step upar ya neeche "1" unit ka altitude change represent karta hai. Hum in terms ko define karte hain:
+
+Mountain (Pahaad): Ek sequence jo sea level ke upar hota hai, jo sea level se upar chadhai ke step ke saath shuru hota hai aur sea level par neeche utarne ke step ke saath khatam hota hai.
+
+Valley (Ghaati): Ek sequence jo sea level ke neeche hota hai, jo sea level se neeche utarne ke step ke saath shuru hota hai aur sea level par upar chadhai ke step ke saath khatam hota hai.
+
+Jo path diya gaya hai, uske basis par ghaatiyon (valleys) ki sankhya dhoondh kar print karo.
+
+Example:
+
+steps=8;
+path=[DDUUUUUDD]
+Yatri pehle ek ghaati me jata hai jo "2" units deep hai. Uske baad wo us ghaati se nikalta hai aur ek pahaad par chadhai karta hai jo "2" units high hai. Finally, yatri sea level par laut aata hai aur hike khatam karta hai.
+
+
 
  */
 
