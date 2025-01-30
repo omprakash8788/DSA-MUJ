@@ -17,4 +17,4 @@ for(let i=0; i<nums.length; i++){
     total=total+i-nums[i]
 
 }
-console.log(total);
+console.log("Final output",total);
