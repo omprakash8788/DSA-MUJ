@@ -27,7 +27,6 @@ for(let i=0; i<nums.length;i++){
     temp+='1';
   }
 }
-// return temp; 
 console.log(temp);
 
 
