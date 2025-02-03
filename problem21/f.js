@@ -7,5 +7,8 @@ function curve(arr, amount) {
 }
 var grades = [77, 73, 74, 81, 90];
 curve(grades, 5);
-print(grades);
+console.log(grades);
+
+
+
 // Expected output- [ 82, 78, 79, 86, 95 ]
