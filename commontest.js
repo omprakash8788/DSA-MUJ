@@ -5,7 +5,7 @@
 // var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // nums.forEach(square);
 
-
+//Write a JavaScript program to calculate the average grade for all students
 // Q. Find the average of grades?.
 var grades = [
   [89, 77, 78],
