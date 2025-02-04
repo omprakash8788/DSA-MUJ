@@ -5,6 +5,7 @@
   
   Example 
   let arr=[0,1,2,2,1,0,2]
+  Expected output : 2 2 3
 */
 let arr=[0,1,2,2,1,0,2]
 let count0=0;
