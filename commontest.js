@@ -37,3 +37,14 @@ for (var row = 0; row < grades.length; ++row) {
 
 // console.log(s.length, s);
 
+
+
+ //Q. How can you efficiently merge two arrays in JavaScript without using built-in methods like concat()?
+
+// Ans: The spread operator (...) in JavaScript provides a concise way to merge two arrays by expanding their elements into a new array. This method is useful for combining multiple arrays while maintaining their order.
+
+let numbersOne = [1, 2, 3];
+let numbersTwo = [4, 5, 6];
+
+// Expected output = [1,2,3,4,5,6]
+
