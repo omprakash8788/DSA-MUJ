@@ -39,6 +39,7 @@
 
 
 
+
 //closures with Example 
 function alpha() {
   let a = 24;
@@ -57,5 +58,5 @@ let numbersOne = [1, 2, 3];
 let numbersTwo = [4, 5, 6];
 
 // Expected output = [1,2,3,4,5,6]
- 
+
 
