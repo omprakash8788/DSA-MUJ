@@ -12,7 +12,7 @@ let arr1=[1,2,3]
 let arr2=[2,4,3]
 let n=3
 let l=0;
-let r=n;
+let r=n-1;
 let count=0
 while(l<n && r>=0){
     if(arr2[r]==arr1[l]){
