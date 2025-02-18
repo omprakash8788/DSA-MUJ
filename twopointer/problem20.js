@@ -3,6 +3,11 @@
 Problem Statement:
 Given an array of positive integers nums and an integer target, find the length of the smallest contiguous subarray whose sum is greater than or equal to target. If no such subarray exists, return 0.
 
+Input: target = 7, nums = [2,3,1,2,4,3]  
+Output: 2  
+Explanation: The smallest subarray with sum ≥ 7 is `[4,3]` (length `2`).
+
+
 */
 
 function minSubArrayLen(target, nums) {
