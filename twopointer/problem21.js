@@ -1,5 +1,5 @@
 /*
-  Longest Mountain in an Array (Two Pointers Approach)
+Longest Mountain in an Array (Two Pointers Approach)
 Problem Statement:
 Given an array arr, find the length of the longest mountain.
 A mountain is defined as:
