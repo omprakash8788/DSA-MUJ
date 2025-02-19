@@ -9,6 +9,38 @@ Input: arr = [1, 2, 2, 3, 4, 4, 5, 6], target = 6
 Output: [[2, 4], [2, 4]]
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let arr = [1, 2, 3, 4, 6];
 let target = 6  ;
 let left = 0, right = arr.length - 1;
