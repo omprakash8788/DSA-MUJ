@@ -1,8 +1,8 @@
 
-
+var a=1;
 function four(){
    if(true){
-    let a=4;
+    var a=4;
    }
    console.log(a);
    
