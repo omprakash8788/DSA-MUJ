@@ -48,3 +48,6 @@ console.log(longestSubarrayWithSumK([1, 2, 3, 4, 5], 9)); // Output: 3 (Subarray
 console.log(longestSubarrayWithSumK([4, 1, 1, 1, 2, 3, 5], 5)); // Output: 4 (Subarray: [1,1,1,2])
 console.log(longestSubarrayWithSumK([3, 1, 2, 1, 1, 1, 2, 3], 6)); // Output: 4 (Subarray: [1,2,1,2])
 console.log(longestSubarrayWithSumK([1, 2, 3], 7)); // Output: 0 (No subarray found)
+
+
+
