@@ -12,23 +12,15 @@ Answer: [0, 3]
 
 */
 
-
 function twoSum(A, target) {
-    let hashTable = {}; // Object to store numbers and their indices
-
     for (let i = 0; i < A.length; i++) {
-        let complement = target - A[i]; // Find the required pair number
-
-        // Check if the complement exists in our hash table
-        if (hashTable[complement] !== undefined) {
-            return [hashTable[complement], i]; // Return indices of both numbers
+        for (let j = i + 1; j < A.length; j++) {
+            if (A[i] + A[j] === target) {
+                return [i, j];
+            }
         }
-
-        // Store the current number's index in the hash table
-        hashTable[A[i]] = i;
     }
-
-    return []; // If no solution found (though problem guarantees one solution)
+    return []; // Return an empty array if no solution is found
 }
 
 // Example usage:
