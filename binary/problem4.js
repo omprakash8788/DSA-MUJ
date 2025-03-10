@@ -39,3 +39,45 @@ function lastOccurrence(nums, target) {
     const nums = [1, 2, 3, 4, 4, 5];
     const target = 4;
     console.log(lastOccurrence(nums, target));  // Output: 4
+
+
+    /*
+     Efficient Approach (Binary Search)
+Idea: Use binary search to find the last occurrence of the target in the sorted array.
+
+Steps:
+
+Initialize low to 0 and high to n - 1.
+Perform binary search:
+If nums[mid] equals the target and is the last occurrence (either mid == n - 1 or nums[mid + 1] > target), return mid.
+If nums[mid] is less than or equal to the target, move low to mid + 1.
+Otherwise, move high to mid - 1.
+If the target is not found, return -1.
+Time Complexity: O(log n) where n is the length of the array.
+
+Space Complexity: O(1) as it uses constant extra space.
+
+
+*/
+
+// function lastOccurrence(nums, target) {
+//     let low = 0, high = nums.length - 1;
+//     while (low <= high) {
+//         let mid = Math.floor((low + high) / 2);
+//             if (nums[mid] === target) {
+//                 if (mid === nums.length - 1 || nums[mid + 1] > target) {
+//                     return mid;
+//                 }
+//                 low = mid + 1;
+//             } else if (nums[mid] > target) {
+//                 high = mid - 1;
+//             } else {
+//                 low = mid + 1;
+//             }
+//         }
+//         return -1;
+//     }
+
+//     const nums = [1, 2, 3, 4, 4, 5];
+//     const target = 4;
+//     console.log(lastOccurrence(nums, target));  // Output: 4
