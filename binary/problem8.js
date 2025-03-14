@@ -43,3 +43,42 @@ function findMissingBruteForce(arr) {
   
   const arr = [1, 3, 5, 7, 11];
   console.log(findMissingBruteForce(arr));  // Output: 9
+
+
+  /*
+   Efficient Approach (Binary Search)
+Idea:
+
+Use binary search to find the missing element. Since the array is sorted and forms an arithmetic progression, the missing element must lie where the progression deviates from the expected values.
+Steps:
+
+Set two pointers low = 0 and high = n-1.
+Calculate the common difference d.
+Use binary search to find the missing element by checking whether the middle element is in its correct position relative to the common difference.
+Adjust the low and high pointers based on whether the missing element lies in the left or right half.
+Time Complexity: O(log n)
+
+Space Complexity: O(1)
+
+ function findMissingBinarySearch(arr) {
+  let low = 0, high = arr.length - 1;
+  let d = (arr[high] - arr[0]) / arr.length;
+  
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+
+    // Check if the element at mid is in the expected position
+    if (arr[mid] == arr[0] + mid * d) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+  
+  // The missing element is between low and high
+  return arr[0] + low * d;
+}
+
+const arr = [1, 3, 5, 7, 11];
+console.log(findMissingBinarySearch(arr));  // Output: 9
+  */
