@@ -90,26 +90,59 @@ Space Complexity: O(n)
 
 */
 
+// function decrypt(code, k) {
+//     const n = code.length;
+//     if (k === 0) return Array(n).fill(0);
+
+//     const result = new Array(n).fill(0);
+//     const absK = Math.abs(k);
+    
+//     let windowSum = 0;
+//     for (let i = 0; i < absK; i++) {
+//         windowSum += code[i];
+//     }
+    
+//     for (let i = 0; i < n; i++) {
+//         windowSum += code[(i + absK) % n];
+//         result[i] = windowSum;
+//         windowSum -= code[i];
+//     }
+    
+//     return result;
+// }
+// const code = [5,7,1,4];
+// const k = 3;
+// console.log(decrypt(code, k));  // Output: [12, 10, 16, 13]
+
+
 function decrypt(code, k) {
     const n = code.length;
+
     if (k === 0) return Array(n).fill(0);
 
     const result = new Array(n).fill(0);
-    const absK = Math.abs(k);
-    
-    let windowSum = 0;
-    for (let i = 0; i < absK; i++) {
-        windowSum += code[i];
-    }
-    
+
     for (let i = 0; i < n; i++) {
-        windowSum += code[(i + absK) % n];
-        result[i] = windowSum;
-        windowSum -= code[i];
+        let sum = 0;
+
+        if (k > 0) {
+            // Sum next k elements
+            for (let j = 1; j <= k; j++) {
+                sum += code[(i + j) % n]; // Circular indexing
+            }
+        } else {
+            // Sum previous |k| elements
+            for (let j = 1; j <= Math.abs(k); j++) {
+                sum += code[(i - j + n) % n]; // Circular indexing (handles negatives)
+            }
+        }
+
+        result[i] = sum;
     }
-    
+
     return result;
 }
-const code = [5,7,1,4];
+
+const code = [5, 7, 1, 4];
 const k = 3;
-console.log(decrypt(code, k));  // Output: [12, 10, 16, 13]
+console.log(decrypt(code, k)); // Output: [12, 10, 16, 13]
