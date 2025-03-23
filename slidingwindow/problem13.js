@@ -117,6 +117,7 @@ Space Complexity: O(n)
 
 function decrypt(code, k) {
     const n = code.length;
+    let test=one;
 
     if (k === 0) return Array(n).fill(0);
 
