@@ -70,7 +70,8 @@ function printAllContiguousSums(arr) {
       for (let end = start; end < arr.length; end++) {
         subarray.push(arr[end]);
         sum += arr[end];
-        console.log(`[${subarray.join(', ')}] => ${sum}`);
+        // console.log(`[${subarray.join(', ')}] => ${sum}`);
+        console.log(subarray)
       }
     }
   }
