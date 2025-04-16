@@ -16,35 +16,19 @@ Answer: [14, 13, 12, 13, 19]
 
 */
 
-let arr = [3, 5, 6, 2, 4, 7, 8]
-let k=3;
+let arr = [3, 5, 6, 2, 4, 7, 8];
+let k = 3;
 
-function  kSubarraySum(arr, k){
-    let res=[];
-    for(let i=0; i<=arr.length-k; i++){
-        let sum=0;
-        for(let j=i; j<i+k; j++){
-           sum += arr[j];
-        }
-        res.push(sum)
-      
+function kSubarraySum(arr, k) {
+  let res = [];
+  for (let i = 0; i <= arr.length - k; i++) {
+    let sum = 0;
+    for (let j = i; j < i + k; j++) {
+      sum += arr[j];
     }
-    return res;
+    res.push(sum);
+  }
+  return res;
 }
 
-// function kSubarraySum(arr, k) {
-//     let result = [];
-  
-//     for (let i = 0; i <= arr.length - k; i++) {
-//       let sum = 0;
-//       for (let j = i; j < i + k; j++) {
-//         sum += arr[j];
-//       }
-//       result.push(sum);
-//     }
-  
-//     return result;
-//   }
-  
-console.log(kSubarraySum(arr, k))
-
+console.log(kSubarraySum(arr, k));
