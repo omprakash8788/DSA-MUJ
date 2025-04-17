@@ -1,8 +1,6 @@
 /*
  K-Subarray Sum
-
  Given an array and a number k, find the sum of all the subarrays of size k.
-
  Example
 Array: [3, 5, 6, 2, 4, 7, 8]
 k: 3
