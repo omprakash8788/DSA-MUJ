@@ -10,7 +10,6 @@ Size of A after removing duplicate elements: 5
 
 */
 let A=[1, 2, 3, 3, 3, 4, 5, 5]
-let count=0;
 
 if(A.length==0){
     return 0;
