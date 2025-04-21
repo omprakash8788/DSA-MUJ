@@ -1,0 +1,12 @@
+/*
+  Sorted Arrays Intersection
+
+  Given 2 sorted arrays, return the intersection of both the arrays. The intersection of 2 arrays means all the elements which are present in both.
+
+Example
+Array 1: [1, 3, 4, 5, 5, 6, 6, 7]
+Array 2: [2, 5, 6, 6, 7, 8]
+Intersection: [5, 6, 6, 7]
+
+
+*/
