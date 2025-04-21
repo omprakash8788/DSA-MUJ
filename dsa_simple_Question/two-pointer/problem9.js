@@ -10,3 +10,24 @@ Intersection: [5, 6, 6, 7]
 
 
 */
+let res=[]
+let A=[1, 3, 4, 5, 5, 6, 6, 7];
+let B=[2, 5, 6, 6, 7, 8];
+ 
+let i=0;
+let j=0;
+while(i<A.length && j<B.length){
+    if(A[i]==B[j]){
+        res.push(A[i]) 
+        i++
+        j++
+
+    }
+    else if(A[i] < B[j]){
+        i++
+    }
+    else{
+        j++
+    }
+}
+console.log(res)
