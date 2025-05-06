@@ -7,8 +7,6 @@ If no such occurence exists, return -1.
 This problem is also known as finding needle in a haystack.
 Use the Rabin-Karp algorithm to solve this problem.
 
-
-
 Example 1
 s1: “helloworld”
 s2: “low”
