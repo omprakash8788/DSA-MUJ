@@ -4,9 +4,6 @@
 Input: arr = [1, 2, 3, 4, 5, 6, 7, 8, 9], target = 5  
 Output: 4  
 Explanation: The number 5 is found at index 4. */
-
-
-
 function binarySearch(arr, target) {
     let left = 0;
     let right = arr.length - 1;
