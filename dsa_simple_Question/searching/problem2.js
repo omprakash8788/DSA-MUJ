@@ -6,7 +6,6 @@
 If the key is not present, return [-1, -1].
 
 Expected Time Complexity: O(log n)
-
 Examples
 Array: [1, 2, 3, 3, 3, 4, 4, 5]
 Number: 3
