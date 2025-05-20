@@ -1,6 +1,5 @@
 /*
  Given a number n, we need to print its table
-
  let n= 5
  output :
  5*1=5
