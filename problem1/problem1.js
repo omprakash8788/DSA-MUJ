@@ -4,7 +4,7 @@
  Input 
  N=5;
  arr=[1,2,3,4,5]
- output:-
+ output:- 
  1
  2
  3
