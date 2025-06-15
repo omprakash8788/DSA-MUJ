@@ -7,6 +7,7 @@ let str="bcdbc"
 Expected output=7
 */
 
+
 str="bcdbc";
 let count=0;
 for(let i=0; i<str.length; i++){
