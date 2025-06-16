@@ -2,6 +2,7 @@
  Count digits.
   You are given an array, stored in a variable with the size arr.
   You have to find the count of "0"s, "1"s, and "2",
+
   
   Example 
   let arr=[0,1,2,2,1,0,2]
