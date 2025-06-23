@@ -6,7 +6,6 @@ Example:
 Input: n = 2
 Output: 1 
 Explanation: 1 is the 2nd number of Fibonacci series.
-
 Input: n = 5
 Output: 5
 Explanation: 5 is the 5th number of Fibonacci series.
