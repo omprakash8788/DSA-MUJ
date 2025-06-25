@@ -73,3 +73,20 @@
 // var square1=square(n);
 // var square2=square(4);
 
+
+
+// let obj = { 
+//     name: "John",
+//      age: 25 ,
+//     address:{
+//         village:"Lakatola"
+//     }
+// };
+
+// console.log("Orginal object",obj)
+// let newObj={...obj, name:"omprakash", age:"14", address:{...obj.address, village:"Siwan"}}
+// console.log("Modified object",newObj)
+// console.log(obj==newObj)
+//now task is to modified newObj name to "Op", age:"14", viallage :"siwan"
+
+
