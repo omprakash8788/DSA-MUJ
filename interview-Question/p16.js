@@ -3,6 +3,7 @@ let a = {
   y: 2,
 };
 let b = a; 
+// console.log(a==b)
 
 //  b = {
 //   x: 1,

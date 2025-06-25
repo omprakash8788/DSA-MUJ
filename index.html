@@ -10,18 +10,12 @@
   </body>
 </html>
 <script>
-  // Topic - closures
+const arr = [1, 2, 3, 4, 5];
 
-  function z() {
-    var b=900;
-    function x() {
-      var a = 7;
-      function y() {
-        console.log(a,b);
-      }
-      y();
-    }
-    x();
-  }
-  z();
+for (var i = 0; i <= arr.length; i++) {
+  setTimeout(function () {
+    console.log(i);
+    
+  }, 1000);
+}
 </script>
