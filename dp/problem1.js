@@ -10,7 +10,6 @@ Input: n = 5
 Output: 5
 Explanation: 5 is the 5th number of Fibonacci series.
 */
-
 // function nthFibonacci(n){
 
 //     // Base case: if n is 0 or 1, return n
