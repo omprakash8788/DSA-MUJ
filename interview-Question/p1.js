@@ -6,7 +6,6 @@ function display() {
 display();
 // console.log(a); // Reference error, a is not defined, it means undefined , then undefined === undefined, become true.
 console.log("a", typeof a === "undefined");
-
 // Ans is true 
 //Why  - because 'a' is functional scope , so in this case you will access with in functional scope , but if you try to access from outer side you will get reference error.
 // 
