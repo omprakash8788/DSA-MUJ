@@ -90,3 +90,74 @@
 //now task is to modified newObj name to "Op", age:"14", viallage :"siwan"
 
 
+
+// let a = { x: 1 };
+// let b = { x: 2 };
+// let c = { x: 3 };
+// let d = { x: 4 };
+// let e = { x: 5 };
+// let arr = [a, b, c, d, e];
+// // map it with key *2 
+// arr.map((value)=>(value.x=value.x*2))
+// console.log(a.x, b.x, c.x, d.x, e.x)
+
+// alert(isNaN(false))
+
+// let nameobj= new Object();
+// nameobj={
+//  name:"op",
+//  roll:456
+// }
+// console.log(nameobj)
+
+// var o=new Object();
+// console.log(o)
+
+// var num1=5;
+// var num2=num1;
+
+// var obj1=new Object();
+// var obj2=obj1;
+// obj1.name="op";
+// console.log(obj2.name);
+
+var color = "blue";
+function changeColor(){
+    var anotherColor="red";
+    function swapColors(){
+        var tempColor=anotherColor; // red 
+        anotherColor=color; // blue 
+
+    }
+    swapColors();
+}
+changeColor();
+// 163 page pe tha...
+
+
+
+// Interview question 
+
+// What is the output of below code?
+// const num = 1;
+// 	const result = (function(num) {
+// 	    delete num; // 0 
+// 	    return num;  // 0 
+// 	})(10);
+// 	console.log(result); // 0
+
+// What is the output of below code?
+	var num = 1;
+	let result = function () {
+	console.log(num); //1,  undefined 
+	var num = 2;
+	}
+	result();
+
+
+// "What is the output of -2/4*5
+// A. 2.5
+// B. 0.1
+// C. Nan
+
+console.log(-2/4*5)
