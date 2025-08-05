@@ -8,6 +8,7 @@
 
 // Examples : 
 
+
 // Input : 3
 // Output : 4
 
