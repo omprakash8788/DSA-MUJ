@@ -1,5 +1,6 @@
 /*
  Search Range
+ 
 
  Given a sorted array and a number key, find the index of the first and last occurrence of the key in the array.
 
