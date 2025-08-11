@@ -39,8 +39,13 @@
 // 1 → 3 → 9 → end
 
 function minJumps(arr) {
-    if (arr.length <= 1) return 0; // Already at last index
-    if (arr[0] === 0) return -1;   // Can't move at all
+    if (arr.length <= 1){
+        return 0; // Already at last index
+
+    }
+    if (arr[0] === 0){
+     return -1;   // Can't move at all
+    } 
 
     let maxReach = arr[0]; // Farthest we can reach initially
     let steps = arr[0];    // Steps left in current jump
@@ -48,7 +53,9 @@ function minJumps(arr) {
 
     for (let i = 1; i < arr.length; i++) {
         // If we've reached the end
-        if (i === arr.length - 1) return jumps;
+        if (i === arr.length - 1){
+            return jumps;
+        } 
 
         // Update the farthest we can go
         maxReach = Math.max(maxReach, i + arr[i]);
@@ -61,7 +68,9 @@ function minJumps(arr) {
             jumps++;
 
             // If current index is already beyond maxReach → can't move further
-            if (i >= maxReach) return -1;
+            if (i >= maxReach){
+              return -1;
+            } 
 
             // Reset steps for the new jump
             steps = maxReach - i;
