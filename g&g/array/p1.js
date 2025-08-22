@@ -4,6 +4,7 @@
 
 // For example:
 
+
 // If arr[i] = 3, you can jump to index i + 1, i + 2, or i + 3 from position i.
 // If arr[i] = 0, you cannot jump forward from that position.
 // Your task is to find the minimum number of jumps needed to move from the first position in the array to the last position.
