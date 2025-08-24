@@ -121,17 +121,17 @@
 // obj1.name="op";
 // console.log(obj2.name);
 
-var color = "blue";
-function changeColor(){
-    var anotherColor="red";
-    function swapColors(){
-        var tempColor=anotherColor; // red 
-        anotherColor=color; // blue 
+// var color = "blue";
+// function changeColor(){
+//     var anotherColor="red";
+//     function swapColors(){
+//         var tempColor=anotherColor; // red 
+//         anotherColor=color; // blue 
 
-    }
-    swapColors();
-}
-changeColor();
+//     }
+//     swapColors();
+// }
+// changeColor();
 // 163 page pe tha...
 
 
@@ -147,12 +147,12 @@ changeColor();
 // 	console.log(result); // 0
 
 // What is the output of below code?
-	var num = 1;
-	let result = function () {
-	console.log(num); //1,  undefined 
-	var num = 2;
-	}
-	result();
+	// var num = 1;
+	// let result = function () {
+	// console.log(num); //1,  undefined 
+	// var num = 2;
+	// }
+	// result();
 
 
 // "What is the output of -2/4*5
@@ -160,4 +160,12 @@ changeColor();
 // B. 0.1
 // C. Nan
 
-console.log(-2/4*5)
+// console.log(-2/4*5)
+
+
+
+function display() {
+  var a = (b = 10); 
+}
+display();
+console.log("a", typeof a === "undefined");
