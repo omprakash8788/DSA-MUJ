@@ -51,7 +51,7 @@
 // 5
 // 4
 // 2
-// 3 
+// 3
 
 // 1
 //5
@@ -59,11 +59,10 @@
 // 3
 // 4
 
-// 0, 1, 2, 3 
+// 0, 1, 2, 3
 // for (var i = 0; i<= 3; i++) {
 //  setTimeout(() => console.log(i), 1000);
 // }
-
 
 // var n=2;
 // function square(num){
@@ -73,9 +72,7 @@
 // var square1=square(n);
 // var square2=square(4);
 
-
-
-// let obj = { 
+// let obj = {
 //     name: "John",
 //      age: 25 ,
 //     address:{
@@ -89,15 +86,13 @@
 // console.log(obj==newObj)
 //now task is to modified newObj name to "Op", age:"14", viallage :"siwan"
 
-
-
 // let a = { x: 1 };
 // let b = { x: 2 };
 // let c = { x: 3 };
 // let d = { x: 4 };
 // let e = { x: 5 };
 // let arr = [a, b, c, d, e];
-// // map it with key *2 
+// // map it with key *2
 // arr.map((value)=>(value.x=value.x*2))
 // console.log(a.x, b.x, c.x, d.x, e.x)
 
@@ -125,8 +120,8 @@
 // function changeColor(){
 //     var anotherColor="red";
 //     function swapColors(){
-//         var tempColor=anotherColor; // red 
-//         anotherColor=color; // blue 
+//         var tempColor=anotherColor; // red
+//         anotherColor=color; // blue
 
 //     }
 //     swapColors();
@@ -134,26 +129,23 @@
 // changeColor();
 // 163 page pe tha...
 
-
-
-// Interview question 
+// Interview question
 
 // What is the output of below code?
 // const num = 1;
 // 	const result = (function(num) {
-// 	    delete num; // 0 
-// 	    return num;  // 0 
+// 	    delete num; // 0
+// 	    return num;  // 0
 // 	})(10);
 // 	console.log(result); // 0
 
 // What is the output of below code?
-	// var num = 1;
-	// let result = function () {
-	// console.log(num); //1,  undefined 
-	// var num = 2;
-	// }
-	// result();
-
+// var num = 1;
+// let result = function () {
+// console.log(num); //1,  undefined
+// var num = 2;
+// }
+// result();
 
 // "What is the output of -2/4*5
 // A. 2.5
@@ -162,10 +154,15 @@
 
 // console.log(-2/4*5)
 
-
+// function display() {
+//   var a = (b = 10);
+// }
+// display();
+// console.log("a", typeof a === "undefined");
 
 function display() {
-  var a = (b = 10); 
+  var a = (b = 10);
+  console.log("line 4", a);
 }
 display();
-console.log("a", typeof a === "undefined");
+console.log("b", typeof b === "undefined");
