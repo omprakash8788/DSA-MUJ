@@ -24,7 +24,7 @@ let arr1 = [1, 5, 10, 20, 40, 80],
 let set1 = new Set(arr1);
 let set2 = new Set(arr2);
 let set3 = new Set(arr3);
-
+// console.log(set1, set2,set3)
 
 let result = [];
 
