@@ -1,7 +1,6 @@
 
 /*
  Reverse Words in String
-
 Given a string s, reverse the order of words.
 
 A word is a sequence of non-space characters. Words in the string s will have one space between them. There are no leading or trailing spaces.
