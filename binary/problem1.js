@@ -1,5 +1,6 @@
 
 
+
 /* Binary Search Question:
  You are given a sorted array of integers and a target value. Implement a function to find the index of the target value using Binary Search. If the target is not found, return -1.
 Input: arr = [1, 2, 3, 4, 5, 6, 7, 8, 9], target = 5  
