@@ -1,3 +1,4 @@
+
 // Print all the duplicate characters in a string
 
 // Given a string s, the task is to identify all characters that appear more than once and print each as a list containing the character and its count.
