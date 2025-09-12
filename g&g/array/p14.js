@@ -23,7 +23,7 @@ let prices = [7,1,5,3,6,4]
 //      let right =0;
 //      let max_profit=0;
 //      while(right<prices.length){
-//         if(prices[left]<prices[right]){
+//         if(prices[left] < prices[right]){
 //             let profit=prices[right]-prices[left];
 //             max_profit=Math.max(max_profit, profit);
 //         }
