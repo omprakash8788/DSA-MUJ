@@ -160,9 +160,78 @@
 // display();
 // console.log("a", typeof a === "undefined");
 
-function display() {
-  var a = (b = 10);
-  console.log("line 4", a);
+// function display() {
+//   var a = (b = 10);
+//   console.log("line 4", a);
+// }
+// display();
+// console.log("b", typeof b === "undefined");
+
+// let arr = [0, 1, 2, 0, 1, 2];
+// let zero = [];
+// let one = [];
+// let two = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] === 0) {
+//     zero.push(arr[i]);   // ✅ correct usage
+//   } else if (arr[i] === 1) {
+//     one.push(arr[i]);    // ✅
+//   } else {
+//     two.push(arr[i]);    // ✅
+//   }
+// }
+
+// let result = [...zero, ...one, ...two];
+// console.log(result); 
+// 👉 [0, 0, 1, 1, 2, 2]
+
+
+// Shallow Copy
+// A shallow copy occurs when you copy the reference of an object to a new variable. In this process, only the top-level properties are copied, while nested objects or arrays still reference the original memory location. This means that if you change the nested properties in one object, those changes will reflect in the other because they share the same memory reference.
+
+// How Shallow Copy Works
+// When you assign one object to another using the assignment operator (=), a shallow copy is created:
+
+// let employee = {
+//     eid: "E102",
+//     ename: "Jack",
+//     eaddress: "New York",
+//     salary: 50000,
+//     class:{
+//         test:"js"
+//     }
+// }
+
+// console.log("Employee=> ", employee);
+// let newEmployee = employee;    // Shallow copy
+// console.log("New Employee=> ", newEmployee);
+
+// console.log("---------After modification----------");
+
+
+
+// newEmployee.ename ="Beck";
+// newEmployee.class.test="Node.js"
+// console.log("Employee=> ", employee);
+// console.log("New Employee=> ", newEmployee);
+// // Name of the employee as well as 
+// // newEmployee is changed.
+
+
+let employee = {
+    eid: "E102",
+    ename: "Jack",
+    eaddress: "New York",
+    salary: 50000,
+    class:{
+        test:"js"
+    }
 }
-display();
-console.log("b", typeof b === "undefined");
+
+console.log(employee)
+
+// 
+const copyObj=employee;
+copyObj.eid='RRR'
+console.log(copyObj)
