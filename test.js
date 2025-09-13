@@ -219,19 +219,60 @@
 // // newEmployee is changed.
 
 
-let employee = {
-    eid: "E102",
-    ename: "Jack",
-    eaddress: "New York",
-    salary: 50000,
-    class:{
-        test:"js"
+// let employee = {
+//     eid: "E102",
+//     ename: "Jack",
+//     eaddress: "New York",
+//     salary: 50000,
+//     class:{
+//         test:"js"
+//     }
+// }
+
+// console.log(employee)
+
+// // 
+// const copyObj=employee;
+// copyObj.eid='RRR'
+// console.log(copyObj)
+
+
+let  s = "successes"
+ let countv={}
+    let countC={};
+    for(let i=0; i<s.length; i++){
+        if(s[i] =="a" || s[i]=="e" || s[i]=="i" || s[i]=="o" || s[i]=="u"){
+          if(countv[s[i]]==undefined){
+            countv[s[i]]=1
+          }
+          else{
+            countv[s[i]]++
+          }
+        }else{
+            if(countC[s[i]]==undefined){
+               countC[s[i]]=1;  
+            }else{
+                   countC[s[i]]++ 
+            }
+        }
     }
-}
+    // let maxv=0;
+     let maxFreq = 0;
+    let mostFrequentElement = null;
 
-console.log(employee)
+    for (const element in countv) {
+      if (countv[element] > maxFreq) {
+        maxFreq = countv[element];
+        // mostFrequentElement = element;
+      }
+    }
 
-// 
-const copyObj=employee;
-copyObj.eid='RRR'
-console.log(copyObj)
+    let maxC=0
+    for(const ele in countC){
+        if(countC[ele] >maxC ){
+            maxC=countC[ele]
+        }
+    }
+
+  let sum= maxFreq + maxC;  
+  console.log(sum)  
