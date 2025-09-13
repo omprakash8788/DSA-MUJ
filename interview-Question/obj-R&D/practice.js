@@ -23,7 +23,7 @@
 //    console.log(key, car[key])
 // }
 
-
+// ----------------------------------------------------------
 
 // Ab chalte hain Level 2 – Transformations pe:
 
@@ -38,21 +38,21 @@
 // let backToObj = Object.fromEntries(entries);
 // console.log(backToObj);
 
-
+//---------------------------------------------
 // Write a function that doubles all numeric values in an object.
 // Input: { x: 2, y: 5 }
 // Output: { x: 4, y: 10 }
 
-let obj={ x: 2, y: 5 };
-for(const num in obj){
-  console.log(obj[num] * 2)
-}
+// let obj={ x: 2, y: 5 };
+// for(const num in obj){
+//   console.log(obj[num] * 2)
+// }
 
-const testObj=Object.fromEntries(
-    Object.entries(obj).map(([k,v])=>[k, v * 2])
-)
-console.log(testObj)
-testObj();
+// const testObj=Object.fromEntries(
+//     Object.entries(obj).map(([k,v])=>[k, v * 2])
+// )
+// console.log(testObj)
+// testObj();
 
 // ⚡ Hack: Map object values
 // const newObj = Object.fromEntries(
@@ -60,8 +60,208 @@ testObj();
 // );
 // console.log(newObj); // { a:2, b:4 }
 
+// --------------------------------------------------------
+// Cloning & Merging karte hain:
+// Q6.
+// Create a shallow copy and deep copy of:
+// const obj = { x: 1, y: { z: 2 } };
+// Phir y.z update karke check kar original change hota hai ya nahi.
+
+// const shallowCopy={...obj};
+// console.log(shallowCopy)
+
+// ✅ Ye shallow copy bana diya.
+// ⚠️ Lekin dikkat: shallow copy sirf top-level keys copy karta hai. Nested object (y) still reference hai.
+// shallowCopy.y.z = 999;
+// console.log(shallowCopy); // { x: 1, y: { z: 999 } }
+// console.log(obj);         // { x: 1, y: { z: 999 } } ❌ original bhi badal gaya
+
+//----------------------------------------
+
+// Ab deep copy kar ke dekh:
+// Old trick (JSON method):
+// const obj = { x: 1, y: { z: 2 } };
+// const deepCopy = JSON.parse(JSON.stringify(obj));
+// console.log(deepCopy)
+// deepCopy.y.z = 500;
+// console.log(deepCopy); // { x: 1, y: { z: 500 } }
+// console.log(obj);      // { x: 1, y: { z: 2 } } ✅ original safe hai
+
+//-----------------------------------
+// const obj = { x: 1, y: { z: 2 } };
+// const deepCopy2 = structuredClone(obj);
+// deepCopy2.y.z = 777;
+// console.log(deepCopy2); // { x: 1, y: { z: 777 } }
+// console.log(obj);       // { x: 1, y: { z: 2 } }
+
+// --------------------------------
+// Ab Q7 (Merging) try kar:
+// Tere paas yeh do objects hain:
+// const a = { name: "Om", age: 24 };
+// const b = { age: 25, city: "Delhi" };
+// // Ek naya merged object banao jisme age ki value b wali ho (latest overwrite ho).
+// // Matlab final output:
+// //{ name: "Om", age: 25, city: "Delhi" }
+
+// const merObj={...a, ...b};
+// console.log(merObj)
+
+//-----------------
+
+// const state = { user: { profile: { name: "Om", age: 24 } } };
+// // Isme sirf age ko 25 karo without mutating original object.
+
+// const update ={
+//     ...state,
+//     user:{
+//         ...state.user,
+//         profile:{
+//             ...state.user.profile,
+//             age:25
+//         }
+//     }
+// }
+
+// console.log(update, state)
+
+// -----------------
+
+// const state = {
+//   user: {
+//     profile: { name: "Om", age: 24, city: "Delhi" }
+//   }
+// };
+// sirf city ko "Mumbai" karo
+
+// const update ={
+//     ...state,
+//     user:{
+//         ...state.user,
+//         profile:{
+//             ...state.user.profile,
+//             city:"Mumbai",
+//         }
+//     }
+// }
+
+// console.log(update, state)
+
+// ------------------------
+// const state = { 
+//   cart: { 
+//     items: [ { id: 1, qty: 1 }, { id: 2, qty: 2 } ] 
+//   } 
+// };
+
+// // item id=2 ka qty 5 karo
+// const update = {
+//   ...state,
+//   cart: {
+//     ...state.cart,
+//     items: state.cart.items.map(item =>
+//       item.id === 2 ? { ...item, qty: 5 } : item
+//     )
+//   }
+// };
+
+// console.log("Original:", state);
+// console.log("Updated:", update);
+// console.log("Original:", JSON.stringify(state, null, 2));
+// console.log("Updated:", JSON.stringify(update, null, 2));
 
 
+// ---------------------------------------
+
+// const state = { 
+//   settings: { 
+//     theme: { mode: "light", font: "small" } 
+//   } 
+// };
+// // mode ko "dark" aur font ko "large" karo
+// const update ={
+//     ...state,
+//     settings:{
+//         ...state.settings,
+//         theme:{
+//             ...state.settings.theme,
+//             mode:"dark",
+//             font:"large"
+//         }
+//     }
+// }
+// console.log(update, state)
 
 
+// -----------------------
+// const state = { 
+//   company: { 
+//     employees: { 
+//       e1: { name: "Raj", role: "Dev" }, 
+//       e2: { name: "Om", role: "Tester" } 
+//     } 
+//   } 
+// };
+// // employee e2 ka role "Manager" karo
+// const update={
+//     ...state,
+//     company:{
+//         ...state.company,
+//         employees:{
+//             ...state.company.employees,
+//              e2:{
+//             ...state.company.employees.e2,
+//             role:"Manager"
+//         }
+//         }
+     
+//     }
+// }
+// console.log(JSON.stringify(update))
 
+
+// ------------------------------------
+// const state = { 
+//   library: { 
+//     books: [ 
+//       { id: 1, title: "JS Basics", author: { name: "Kyle" } }, 
+//       { id: 2, title: "React Guide", author: { name: "Om" } } 
+//     ] 
+//   } 
+// };
+// // book id=1 ke author ka name "Omprakash" karo
+// const update = {
+//     ...state,
+//     library:{
+//         ...state.library.books.map(item=>item.id===1 ? {...item, ...item.author="op"} : item)
+//     }
+// }
+// console.log(JSON.stringify(update))
+
+
+const state = { 
+  library: { 
+    books: [ 
+      { id: 1, title: "JS Basics", author: { name: "Kyle" } }, 
+      { id: 2, title: "React Guide", author: { name: "Om" } } 
+    ] 
+  } 
+};
+
+// book id=1 ke author ka name "Omprakash" karo
+const update = {
+  ...state,
+  library: {
+    ...state.library,
+    books: state.library.books.map(item =>
+      item.id === 1
+        ? { 
+            ...item, 
+            author: { ...item.author, name: "Omprakash" } 
+          }
+        : item
+    )
+  }
+};
+
+console.log("Original:", JSON.stringify(state, null, 2));
+console.log("Updated:", JSON.stringify(update, null, 2));
