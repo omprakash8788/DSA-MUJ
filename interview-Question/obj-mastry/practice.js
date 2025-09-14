@@ -238,30 +238,189 @@
 // console.log(JSON.stringify(update))
 
 
-const state = { 
-  library: { 
-    books: [ 
-      { id: 1, title: "JS Basics", author: { name: "Kyle" } }, 
-      { id: 2, title: "React Guide", author: { name: "Om" } } 
-    ] 
-  } 
-};
+// const state = { 
+//   library: { 
+//     books: [ 
+//       { id: 1, title: "JS Basics", author: { name: "Kyle" } }, 
+//       { id: 2, title: "React Guide", author: { name: "Om" } } 
+//     ] 
+//   } 
+// };
 
-// book id=1 ke author ka name "Omprakash" karo
-const update = {
+// // book id=1 ke author ka name "Omprakash" karo
+// const update = {
+//   ...state,
+//   library: {
+//     ...state.library,
+//     books: state.library.books.map(item =>
+//       item.id === 1
+//         ? { 
+//             ...item, 
+//             author: { ...item.author, name: "Omprakash" } 
+//           }
+//         : item
+//     )
+//   }
+// };
+
+// console.log("Original:", JSON.stringify(state, null, 2));
+// console.log("Updated:", JSON.stringify(update, null, 2));
+
+
+// const state = { user: { name: "Om", age: 24 } };
+// // Age ko 25 karo bina original mutate kiye.
+// const update = {
+//   ...state,
+//   user:{
+//     ...state.user,
+//     name:"Raja ji",
+//     city:"mumbai",
+//     age:25
+    
+//   }
+// }
+// console.log(update, state)
+
+// -----------------------
+
+// 14/09/2025.
+
+//Q1.
+// const state = { user: { name: "Om", age: 24 } };
+// // Age ko 25 karo bina original mutate kiye.
+// const update={
+//   ...state,
+//   user:{
+//     ...state.user,
+//     age:25
+//   }
+// }
+// console.log(update)
+
+
+// Q2.
+// const state = { profile: { details: { name: "Om", city: "Delhi" } } };
+// // City ko "Mumbai" karo.
+// const update={
+//   ...state,
+//   profile:{
+//     ...state.profile,
+//     details:{
+//       ...state.profile.details,
+//       city:"Mumbai"
+//     }
+//   }
+// }
+// console.log(update)
+// items: state.items.map(...)
+
+// Q3. 
+// const state = { cart: { items: [ { id: 1, qty: 1 }, { id: 2, qty: 3 } ] } };
+// // id=2 ka qty 5 karo.
+// const update ={
+//   ...state,
+//   cart:{
+//     ...state.cart,
+//    items:state.cart.items.map(item=>item.id==2 ? {...item,qty:5 } :item)
+//   }
+// }
+// console.log(JSON.stringify(update))
+
+//Q4 
+// const state = { library: { books: [ { id: 1, author: { name: "Kyle" } } ] } };
+// // id=1 ke author ka name "Omprakash" karo.
+// const update ={
+//   ...state,
+//   library:{
+//     ...state.library,
+//     books:state.library.books.map(item=>item.id==1 ? {...item, author: { ...item.author, name: "Omprakash" } }:item)
+//   }
+// }
+// console.log(JSON.stringify(update))
+
+
+// Q5
+// const state = { settings: { theme: { mode: "light", font: "small" } } };
+// // Mode "dark" aur font "large" karo.
+
+
+// const update ={
+//   ...state,
+//   settings:{
+//     ...state.settings,
+//     theme:{
+//       ...state.settings.theme,
+//       mode:"dark",
+//       font:"large"
+//     }
+//   }
+// }
+
+// console.log(update)
+
+//Q6
+// const state = { todos: [ { id: 1, task: "Learn JS", done: false }, { id: 2, task: "Learn React", done: false } ] };
+// // id=2 ka done true karo.
+// const update ={
+//   ...state,
+//   todos:state.todos.map(item=>item.id==2 ? {...item,done:true }:item)
+// }
+// console.log(update)
+
+//Q7.
+// const state = { company: { employees: [ { id: 1, info: { name: "Om", role: "Dev" } } ] } };
+// // id=1 ka role "Senior Dev" karo.
+// const update ={
+//   ...state,
+//   company:{
+//     ...state.company,
+//     employees:state.company.employees.map(item=>item.id==1 ? {...item, info:{...item.info, role:"Senior Dev"}}:item)
+//   }
+// }
+// console.log(JSON.stringify(update))
+
+
+
+//Q8.
+// const state = { orders: [ { id: 101, products: [ { name: "Phone", qty: 1 } ] } ] };
+// // id=101 ke products[0] ka qty 2 karo.
+// const update ={
+//   ...state,
+//  orders: state.orders.map(order =>
+//   order.id === 101
+//     ? {
+//         ...order,
+//         products: order.products.map(p =>
+//           p.name === "Phone" ? { ...p, qty: 2 } : p
+//         )
+//       }
+//     : order
+// )
+
+// }
+// console.log(JSON.stringify(update)) 
+
+// Q9
+// const state = { game: { players: [ { id: 1, stats: { score: 10 } } ] } };
+// // id=1 ka score 50 karo.
+// const update = {
+//   ...state,
+//   game:{
+//     ...state.game,
+//     players:state.game.players.map(item => item.id==1 ? {...item, stats:{...item.stats,score:50}}:item)
+//   }
+// }
+// console.log(JSON.stringify(update))
+
+// Q10 
+
+const state = { classroom: { students: [ { id: 1, marks: { math: 80, science: 70 } } ] } };
+// id=1 ka science 90 karo.
+const update ={
   ...state,
-  library: {
-    ...state.library,
-    books: state.library.books.map(item =>
-      item.id === 1
-        ? { 
-            ...item, 
-            author: { ...item.author, name: "Omprakash" } 
-          }
-        : item
-    )
+  classroom:{
+    ...state.classroom,
+    students:state.classroom.students.map(item=>item.id==1 ? {...item, marks:{...item.marks,science:90}}:item)
   }
-};
-
-console.log("Original:", JSON.stringify(state, null, 2));
-console.log("Updated:", JSON.stringify(update, null, 2));
+}
+console.log(JSON.stringify(update))
