@@ -23,17 +23,11 @@
 // Example 2:
 
 // Input: s = "abcabcab"
-
 // Output: 1
-
 // Explanation:
-
 // The character 'a' has an odd frequency of 3, and 'c' has an even frequency of 2.
 // The maximum difference is 3 - 2 = 1.
-
-
 let s = "aaaaabbc";
-
  let obj = {};
     for (let i = 0; i < s.length; i++) {
         if (obj[s[i]] == undefined) {
@@ -42,7 +36,6 @@ let s = "aaaaabbc";
             obj[s[i]]++;
         }
     }
-
     let max = 0;         // will hold maximum odd frequency
     let min = Infinity;  // will hold minimum even frequency
 
@@ -59,7 +52,6 @@ let s = "aaaaabbc";
             } 
         }
     }
-
     // Constraints guarantee at least one odd and one even,
     // but keep a safe fallback:
     if (max === 0 || min === Infinity) return 0;
