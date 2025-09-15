@@ -414,13 +414,117 @@
 
 // Q10 
 
-const state = { classroom: { students: [ { id: 1, marks: { math: 80, science: 70 } } ] } };
-// id=1 ka science 90 karo.
-const update ={
-  ...state,
-  classroom:{
-    ...state.classroom,
-    students:state.classroom.students.map(item=>item.id==1 ? {...item, marks:{...item.marks,science:90}}:item)
-  }
-}
-console.log(JSON.stringify(update))
+// const state = { classroom: { students: [ { id: 1, marks: { math: 80, science: 70 } } ] } };
+// // id=1 ka science 90 karo.
+// const update ={
+//   ...state,
+//   classroom:{
+//     ...state.classroom,
+//     students:state.classroom.students.map(item=>item.id==1 ? {...item, marks:{...item.marks,science:90}}:item)
+//   }
+// }
+// console.log(JSON.stringify(update))
+
+
+//Q1. 
+// const state1 = { user: { name: "Om", age: 24 } };
+// // Age ko 25 karo bina original mutate kiye.
+// const update ={
+//   ...state1,
+//   user:{
+//     ...state1.user,
+//     age:25
+//   }
+// }
+// console.log(update)
+
+
+//Q2
+// const state2 = { profile: { details: { name: "Om", city: "Delhi" } } };
+// // City ko "Mumbai" karo.
+// const update ={
+//   ...state2,
+//   profile:{
+//     ...state2.profile,
+//     details:{
+//       ...state2.profile.details,
+//       city:"Mumbai"
+//     }
+//   }
+// }
+// console.log(update)
+
+//Q3
+// const state3 = { cart: { items: [ { id: 1, qty: 1 }, { id: 2, qty: 3 } ] } };
+// // id=2 ka qty 5 karo.
+// const update ={
+//   ...state3,
+//   cart:{
+//     ...state3.cart,
+//     items:state3.cart.items.map(item=>item.id==2 ? {...item, qty:5}:item)
+
+//   }
+// }
+// console.log(JSON.stringify(update))
+
+//Q4
+// const state4 = { library: { books: [ { id: 1, author: { name: "Kyle" } } ] } };
+// // id=1 ke author ka name "Omprakash" karo.
+// const update ={
+//   ...state4,
+//   library:{
+//     ...state4.library,
+//     books:state4.library.books.map(item=> item.id==1 ? {...item, author:{...item.author, name:"omprakash"}}:item)
+//   }
+// }
+// console.log(JSON.stringify(update))
+
+//Q5
+// const state5 = { settings: { theme: { mode: "light", font: "small" } } };
+// // Mode "dark" aur font "large" karo.
+
+// const update ={
+//   ...state5,
+//   settings:{
+//     ...state5.settings,
+//     theme:{
+//       ...state5.settings.theme,
+//       mode:"dark",
+//       font:"large"
+//     }
+//   }
+// }
+// console.log(update)
+
+//Q6
+// const state6 = { todos: [ { id: 1, task: "Learn JS", done: false }, { id: 2, task: "Learn React", done: false } ] };
+// // id=2 ka done true karo.
+// const update ={
+//   ...state6,
+//   todos:state6.todos.map(item => item.id==2 ? {...item,done:true }:item)
+
+// }
+// console.log(update)
+
+//Q7
+// const state7 = { company: { employees: [ { id: 1, info: { name: "Om", role: "Dev" } } ] } };
+// // id=1 ka role "Senior Dev" karo.
+
+// const update ={
+//   ...state7,
+//   company:{
+//     ...state7.company,
+//     employees:state7.company.employees.map(item=>item.id==1 ? {...item, info:{...item.info, role:"Senior Dev"}}:item)
+//   }
+// }
+// console.log(JSON.stringify(update))
+
+
+//Q8
+// const state8 = { orders: [ { id: 101, products: [ { name: "Phone", qty: 1 } ] } ] };
+// // id=101 ke products[0] ka qty 2 karo.
+// const update= {
+//   ...state8,
+//   orders:state8.orders.map(item=>item.id==101 ? {...item, products:item.products.map(items=>item ? item.qty:2 )} : item)
+// }
+// console.log(JSON.stringify(update))
