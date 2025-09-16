@@ -237,42 +237,57 @@
 // console.log(copyObj)
 
 
-let  s = "successes"
- let countv={}
-    let countC={};
-    for(let i=0; i<s.length; i++){
-        if(s[i] =="a" || s[i]=="e" || s[i]=="i" || s[i]=="o" || s[i]=="u"){
-          if(countv[s[i]]==undefined){
-            countv[s[i]]=1
-          }
-          else{
-            countv[s[i]]++
-          }
-        }else{
-            if(countC[s[i]]==undefined){
-               countC[s[i]]=1;  
-            }else{
-                   countC[s[i]]++ 
-            }
-        }
-    }
-    // let maxv=0;
-     let maxFreq = 0;
-    let mostFrequentElement = null;
+// let  s = "successes"
+//  let countv={}
+//     let countC={};
+//     for(let i=0; i<s.length; i++){
+//         if(s[i] =="a" || s[i]=="e" || s[i]=="i" || s[i]=="o" || s[i]=="u"){
+//           if(countv[s[i]]==undefined){
+//             countv[s[i]]=1
+//           }
+//           else{
+//             countv[s[i]]++
+//           }
+//         }else{
+//             if(countC[s[i]]==undefined){
+//                countC[s[i]]=1;  
+//             }else{
+//                    countC[s[i]]++ 
+//             }
+//         }
+//     }
+//     // let maxv=0;
+//      let maxFreq = 0;
+//     let mostFrequentElement = null;
 
-    for (const element in countv) {
-      if (countv[element] > maxFreq) {
-        maxFreq = countv[element];
-        // mostFrequentElement = element;
-      }
-    }
+//     for (const element in countv) {
+//       if (countv[element] > maxFreq) {
+//         maxFreq = countv[element];
+//         // mostFrequentElement = element;
+//       }
+//     }
 
-    let maxC=0
-    for(const ele in countC){
-        if(countC[ele] >maxC ){
-            maxC=countC[ele]
-        }
-    }
+//     let maxC=0
+//     for(const ele in countC){
+//         if(countC[ele] >maxC ){
+//             maxC=countC[ele]
+//         }
+//     }
 
-  let sum= maxFreq + maxC;  
-  console.log(sum)  
+//   let sum= maxFreq + maxC;  
+//   console.log(sum)  
+
+
+let nums = [0,1,7,4,4,5], lower = 3, upper = 6
+// Output: 6
+let count = 0;
+let arr=[]
+for(let i=0; i<nums.length; i++){
+  for(let j=i+1; j<nums.length; j++){
+    let sum=nums[i] + nums[j];
+    if(sum >= lower && sum <= upper){
+      count++
+    }
+  }
+}
+console.log(count)
