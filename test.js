@@ -183,9 +183,8 @@
 // }
 
 // let result = [...zero, ...one, ...two];
-// console.log(result); 
+// console.log(result);
 // 👉 [0, 0, 1, 1, 2, 2]
-
 
 // Shallow Copy
 // A shallow copy occurs when you copy the reference of an object to a new variable. In this process, only the top-level properties are copied, while nested objects or arrays still reference the original memory location. This means that if you change the nested properties in one object, those changes will reflect in the other because they share the same memory reference.
@@ -209,15 +208,12 @@
 
 // console.log("---------After modification----------");
 
-
-
 // newEmployee.ename ="Beck";
 // newEmployee.class.test="Node.js"
 // console.log("Employee=> ", employee);
 // console.log("New Employee=> ", newEmployee);
-// // Name of the employee as well as 
+// // Name of the employee as well as
 // // newEmployee is changed.
-
 
 // let employee = {
 //     eid: "E102",
@@ -231,11 +227,10 @@
 
 // console.log(employee)
 
-// // 
+// //
 // const copyObj=employee;
 // copyObj.eid='RRR'
 // console.log(copyObj)
-
 
 // let  s = "successes"
 //  let countv={}
@@ -250,9 +245,9 @@
 //           }
 //         }else{
 //             if(countC[s[i]]==undefined){
-//                countC[s[i]]=1;  
+//                countC[s[i]]=1;
 //             }else{
-//                    countC[s[i]]++ 
+//                    countC[s[i]]++
 //             }
 //         }
 //     }
@@ -274,20 +269,47 @@
 //         }
 //     }
 
-//   let sum= maxFreq + maxC;  
-//   console.log(sum)  
+//   let sum= maxFreq + maxC;
+//   console.log(sum)
 
+// let nums = [0,1,7,4,4,5], lower = 3, upper = 6
+// // Output: 6
+// let count = 0;
+// for(let i=0; i<nums.length; i++){
+//   for(let j=i+1; j<nums.length; j++){
+//     let sum=nums[i] + nums[j];
+//     if(sum >= lower && sum <= upper){
+//       count++
+//     }
+//   }
+// }
+// console.log(count)
 
-let nums = [0,1,7,4,4,5], lower = 3, upper = 6
-// Output: 6
-let count = 0;
-let arr=[]
-for(let i=0; i<nums.length; i++){
-  for(let j=i+1; j<nums.length; j++){
-    let sum=nums[i] + nums[j];
-    if(sum >= lower && sum <= upper){
-      count++
-    }
+let triangle = [[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]];
+// let temp = [];
+// for (let i = 0; i < triangle.length; i++) {
+//   let min = triangle[i][0];
+//   for (let j = 0; j < triangle[i].length; j++) {
+//     if (triangle[i][j] < min) {
+//       min = triangle[i][j];
+//     }
+//   }
+//   temp.push(min);
+// }
+// let finalAns= temp.reduce((val, cur)=>val + cur)
+// console.log(finalAns);
+
+let prices = [7, 1, 5, 3, 6, 4];
+let left = 0;
+let right = 0;
+let totalP = [];
+while (right < prices.length) {
+  if (prices[left] < prices[right]) {
+    let profit = prices[right] - prices[left];
+    totalP.push(profit);
+  } else {
+    left = right;
   }
+  right++;
 }
-console.log(count)
+console.log(totalP)
