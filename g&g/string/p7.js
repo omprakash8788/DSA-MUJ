@@ -23,6 +23,7 @@
 // Explanation: We cannot type either word because the 'e' key is broken.
  
 
+
 // let text = "hello world", brokenLetters = "ad"
 let text = "hello world", brokenLetters = "ad";
 let count=0;
