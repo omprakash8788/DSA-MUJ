@@ -28,6 +28,7 @@
 let text = "hello world", brokenLetters = "ad";
 let count=0;
 let words = text.split(" "); 
+console.log(words) // [ 'hello', 'world' ]
 for(let i=0; i<words.length; i++){
     let canType=true
     for(let j=0; j<brokenLetters.length; j++){
