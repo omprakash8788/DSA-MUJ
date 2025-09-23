@@ -1,16 +1,12 @@
-let s = "leeetcode"
-let res="";
-for(let i=0; i<s.length; i++){
-    let count=0;
-    for(let j=i+1; j<s.length; j++){
-        if(s[i]==s[j]){
-            count++;
-            
-        }
+let nums = [7, 1, 5, 4];
+let temp=[];
+    let sum=0
+for(let i=1; i<nums.length; i++){
+
+    if(nums[i] > nums[i-1]){
+        temp.push(nums[i], nums[i-1])
+        sum=nums[i]-nums[i-1]
     }
-     if (count === 3) {
-        continue;  // skip this character
-    }
-    res=res+s[i]
+    
 }
-console.log(res)
+console.log(temp, sum)
