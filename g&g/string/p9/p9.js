@@ -33,3 +33,15 @@ var numWaterBottles = function(numBottles, numExchange) {
     return totalDrank;
 };
 console.log(numWaterBottles( numBottles, numExchange))
+
+
+/*
+ numBottles = 9, numExchange = 3
+- Drink 9 → total = 9, empty = 9
+- Exchange 9/3 = 3 → drink 3 → total = 12, empty = 3
+- Exchange 3/3 = 1 → drink 1 → total = 13, empty = 1
+- Cannot exchange anymore.
+Answer = 13
+
+
+*/
