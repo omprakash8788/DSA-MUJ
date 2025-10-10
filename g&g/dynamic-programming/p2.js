@@ -45,7 +45,7 @@ function fib(n) {
   return dp[n];
 }
 
-console.log(fib(10)); // Output: 55
+console.log(fib(3)); //
 
 
 //Approch 3.  Space Optimized (Iterative)
