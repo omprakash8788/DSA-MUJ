@@ -41,7 +41,6 @@ for (let i = 0; i < storeD.length; i++) {
     continue;
   }
   let prev = storeD[i - 1].split("").sort().join("");
-  //    console.log(prev)
   let curr = storeD[i].split("").sort().join("");
 
   if (prev !== curr) {

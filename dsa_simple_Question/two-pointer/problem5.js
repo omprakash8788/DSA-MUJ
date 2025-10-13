@@ -5,7 +5,7 @@
 
  Examples:
 A: [1 2 3 3 3 4 5 5]
-
+//output = 5;
 Size of A after removing duplicate elements: 5
 
 */
