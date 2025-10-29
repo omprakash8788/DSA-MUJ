@@ -31,14 +31,20 @@ var uniqueOccurrences = function(arr) {
             obj[arr[i]]++
         }
     }
-    let set = new Set();
+    let set = new Set(); // {}
+   
      for (let key in obj) {
+        // let test = obj[key] 3,2,1
+        // console.log(test)
         if (set.has(obj[key])) {
+            
             return false;
         }
         set.add(obj[key]);
+        console.log(set)
     }
 
     return true;
+   
 };
 console.log(uniqueOccurrences(arr))
