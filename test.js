@@ -285,31 +285,65 @@
 // }
 // console.log(count)
 
-let triangle = [[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]];
-// let temp = [];
-// for (let i = 0; i < triangle.length; i++) {
-//   let min = triangle[i][0];
-//   for (let j = 0; j < triangle[i].length; j++) {
-//     if (triangle[i][j] < min) {
-//       min = triangle[i][j];
-//     }
-//   }
-//   temp.push(min);
-// }
-// let finalAns= temp.reduce((val, cur)=>val + cur)
-// console.log(finalAns);
+// let triangle = [[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]];
+// // let temp = [];
+// // for (let i = 0; i < triangle.length; i++) {
+// //   let min = triangle[i][0];
+// //   for (let j = 0; j < triangle[i].length; j++) {
+// //     if (triangle[i][j] < min) {
+// //       min = triangle[i][j];
+// //     }
+// //   }
+// //   temp.push(min);
+// // }
+// // let finalAns= temp.reduce((val, cur)=>val + cur)
+// // console.log(finalAns);
 
-let prices = [7, 1, 5, 3, 6, 4];
-let left = 0;
-let right = 0;
-let totalP = [];
-while (right < prices.length) {
-  if (prices[left] < prices[right]) {
-    let profit = prices[right] - prices[left];
-    totalP.push(profit);
-  } else {
-    left = right;
-  }
-  right++;
-}
-console.log(totalP)
+// let prices = [7, 1, 5, 3, 6, 4];
+// let left = 0;
+// let right = 0;
+// let totalP = [];
+// while (right < prices.length) {
+//   if (prices[left] < prices[right]) {
+//     let profit = prices[right] - prices[left];
+//     totalP.push(profit);
+//   } else {
+//     left = right;
+//   }
+//   right++;
+// }
+// console.log(totalP)
+
+// Input: s = "abcabcbb"
+// Output: 3
+// Explanation: The answer is "abc", with the length of 3. Note that "bca" and "cab" are also correct answers.
+
+// Input: s = "abcd", t = "abcde"
+// Output: "e"
+
+// Input: s = "leetcode"
+
+// Output: 0
+
+// Explanation:
+
+// The character 'l' at index 0 is the first character that does not occur at any other index
+
+// let s = "babad";
+// // Output: "bab"
+// // Explanation: "aba" is also a valid answer.
+// for (let i = 0; i < s.length; i++) {
+//   let newS = "";
+//   for (let j = i; j < s.length; j++) {
+//     newS = newS + s[j];
+
+//     console.log(newS);
+//   }
+//   let newSS=""
+//   for(let k=newS.length-1; k>0; k--){
+//      newSS=newSS + newS[k]
+//   }
+//   console.log("op", newSS)
+//   // console.log("line number 4",newS);
+  
+// }
