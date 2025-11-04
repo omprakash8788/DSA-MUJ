@@ -347,3 +347,35 @@
 //   // console.log("line number 4",newS);
   
 // }
+
+
+let nums = [1,2,2,4]
+let deb=[]
+function findMissingBruteForce(arr) {
+    for (let i = 1; i <= arr.length + 1; i++) {
+        if (!arr.includes(i)) {
+            deb.push(i)
+            return i;
+        }
+    }
+    return -1;
+}
+findMissingBruteForce(nums);
+let obj={};
+for(let j=0; j<nums.length; j++){
+    if(obj[nums[j]]==undefined){
+        obj[nums[j]]=1;
+    }else{
+        obj[nums[j]]++
+    }
+}
+for(let key in obj){
+    if(obj[key] > 1){
+      deb.push(Number(key))
+    }
+}
+
+console.log(deb)
+
+
+
