@@ -13,7 +13,7 @@
 // Explanation: The first element 4 moves to last position, the second element 5 moves to second last and so on.
 
 
-function reverseArray(arr) {
+function reverseArray(arr) { 
     let n = arr.length;
     
     // Temporary array to store elements 
