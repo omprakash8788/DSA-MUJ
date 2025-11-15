@@ -6,6 +6,7 @@ Output: 4
 
 
 
+
 Explanation: The number 5 is found at index 4. */
 function binarySearch(arr, target) {
     let left = 0;
