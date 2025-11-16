@@ -1,6 +1,5 @@
 /*
  Contains Element?
-
  Given a sorted array and a number key, return whether the key is present in the array or not.
 
 Expected Time Complexity: O(log n)
