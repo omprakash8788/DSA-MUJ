@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch data</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     // 8. Write code to fetch data from https://jsonplaceholder.typicode.com/posts and display the first 5 post titles inside a <ul>.
+
+        const fetchData = async()=>{
+            let res = await fetch("https://jsonplaceholder.typicode.com/posts")
+            console.log(res)
+        }
+        fetchData()
+
+
+
+</script>
