@@ -11,7 +11,16 @@
 // Output: 15
 // Explanation: 4th smallest element in the given array is 15.
 
-let arr= [7, 10, 4, 3, 20, 15], k = 3;
-arr.sort((a,b)=>(a-b));
-let kthE=arr[k-1];
-console.log(kthE)
+// let arr= [7, 10, 4, 3, 20, 15], k = 3;
+// arr.sort((a,b)=>(a-b));
+// let kthE=arr[k-1];
+// console.log(kthE)
+
+
+for(var i=1; i<=3; i++){
+    ((counter)=>{
+        setTimeout(()=>{
+            console.log(counter)
+        },1000)
+    })(i)
+}
