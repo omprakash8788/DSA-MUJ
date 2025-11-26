@@ -1,7 +1,6 @@
 /*
  Negative numbers in sorted array
  
-
  Given a sorted array of integers, find the number of negative numbers.
 
  Expected Time Complexity: O(log n)
