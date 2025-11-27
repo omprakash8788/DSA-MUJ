@@ -1,26 +1,15 @@
-// Kth Smallest
+// Sort 0s, 1s and 2s
 
-// Given an array arr[] and an integer k where k is smaller than the size of the array, your task is to find the kth smallest element in the given array.
+// Given an array arr[] containing only 0s, 1s, and 2s. Sort the array in ascending order.
+// Note: You need to solve this problem without utilizing the built-in sort function.
 
-// Examples :
+// Examples:
 
-// Input: arr[] = [7, 10, 4, 3, 20, 15], k = 3
-// Output: 7
-// Explanation: 3rd smallest element in the given array is 7.
-// Input: arr[] = [2, 3, 1, 20, 15], k = 4
-// Output: 15
-// Explanation: 4th smallest element in the given array is 15.
+// Input: arr[] = [0, 1, 2, 0, 1, 2]
+// Output: [0, 0, 1, 1, 2, 2]
+// Explanation: 0s 1s and 2s are segregated into ascending order.
 
-// let arr= [7, 10, 4, 3, 20, 15], k = 3;
-// arr.sort((a,b)=>(a-b));
-// let kthE=arr[k-1];
-// console.log(kthE)
+// Input: arr[] = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
+// Output: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2]
+// Explanation: 0s 1s and 2s are segregated into ascending order.
 
-
-for(var i=1; i<=3; i++){
-    ((counter)=>{
-        setTimeout(()=>{
-            console.log(counter)
-        },1000)
-    })(i)
-}
