@@ -1,3 +1,4 @@
+
 /*
  Print matrix in zigzag format.
  let n=3;
