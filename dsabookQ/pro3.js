@@ -5,6 +5,7 @@ middle	numbers.	If	the	array	is	sorted,	this	is	simple.
  [1,2,3,4]	has	the	median	of	(2+3)/2	=	2.5.
 
 */
+
 //  let arr=[1,2,3,4]
 // function medianOfArray(array) {
 //   var length = array.length;
