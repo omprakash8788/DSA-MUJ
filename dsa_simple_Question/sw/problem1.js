@@ -9,6 +9,7 @@
 
 */
 
+
 // BR Approch.
 let arr =[1,4,20,3,10,5]
 let n=6;
